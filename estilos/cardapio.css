@@ -133,6 +133,10 @@ header {
  .div-rodape-texto {
     font-size: 0.8em;
  }
+ 
+ #menu-footer {
+    color: rgb(255, 115, 0);
+ }
 
  .link-rodape {
     text-decoration: none;

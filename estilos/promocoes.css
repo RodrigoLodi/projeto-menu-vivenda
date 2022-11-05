@@ -77,7 +77,7 @@ header {
     cursor: pointer;
 }
 
-#destaques-header > a > button {
+#ofertas-header > a > button {
     background-color: rgb(255, 115, 0);
     border-color: rgb(255, 115, 0);
     box-shadow: 1px 2px 3px rgb(255, 115, 0); 
@@ -132,11 +132,10 @@ header {
 
  .div-rodape-texto {
     font-size: 0.8em;
-    font-weight: bolder;
  }
 
  #menu-footer {
-    color: rgb(255, 115, 0);
+    color:rgb(255, 115, 0);
  }
 
  .link-rodape {
