@@ -42,6 +42,15 @@ header {
     border-color: black !important;
 }
 
+#confirmar-compra {
+    background-color: green !important;
+    border-color: green !important;
+}
+
+#fechar-modal {
+    
+}
+
 #destaques-header, #cardapio-header, #ofertas-header {
     margin-top: 20px;
     font-size: 0.8em;
@@ -127,6 +136,7 @@ header {
 
 .imagem-main-destaques {
     position: relative;
+
 }
 
 .imagem-main-destaques > img {

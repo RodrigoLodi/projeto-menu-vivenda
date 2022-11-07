@@ -20,7 +20,7 @@
                     <a href="index.html"><img src="imagem/header/logo.png" alt=""></a>
                 </div>
                     <div class="col-2" id="coluna-carrinho">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             <img src="imagem/header/carrinho.png" alt="" class="imagem-carrinho">
                         </button>
                     </div>
@@ -56,20 +56,23 @@
         </nav>
         <main>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">SUAS COMPRAS</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">SUAS COMPRAS</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorum neque ipsa repudiandae laudantium maxime aperiam expedita consequatur provident quas fugiat saepe eligendi inventore nihil quia, esse tempora odio! Qui?
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorem corrupti magnam ad dolor blanditiis. Saepe, assumenda optio dicta magnam quibusdam, totam reprehenderit quo a eveniet vitae officiis! Cupiditate, magni?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel impedit, perspiciatis nisi sint nihil maxime eum repudiandae, minima, ipsam eveniet quo modi repellendus iure enim quia? Obcaecati ullam doloremque atque!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam error quam dolor optio dicta, nemo libero incidunt voluptates quasi deleniti soluta dolorum! Recusandae quasi nobis molestias sint facilis beatae!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, illo nesciunt neque quis atque dignissimos, placeat, sed voluptatum voluptatem error quia. Hic molestiae ab ut perferendis! Eos magnam modi ab?
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="fechar-modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="confirmar-compra">Confirmar Compra</button>
                     </div>
                 </div>
                 </div>
