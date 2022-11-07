@@ -123,6 +123,11 @@ header {
     width: 30px;
  }
 
+ #avalie-footer {
+    color:rgb(255, 115, 0);
+    font-weight: bolder;
+ }
+
  .div-rodape-imagem {
     align-items: center;
     display: flex;
@@ -132,11 +137,6 @@ header {
 
  .div-rodape-texto {
     font-size: 0.8em;
- }
-
- #menu-footer {
-    color: rgb(255, 115, 0);
-    font-weight: bolder;
  }
 
  .link-rodape {

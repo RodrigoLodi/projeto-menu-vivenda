@@ -134,9 +134,9 @@ header {
     font-size: 0.8em;
  }
 
- #menu-footer {
-    color: rgb(255, 115, 0);
+ #pedidos-footer {
     font-weight: bolder;
+    color: rgb(255, 115, 0);
  }
 
  .link-rodape {
