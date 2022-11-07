@@ -109,6 +109,48 @@ header {
     background-image: linear-gradient(to right, transparent, rgb(255, 255, 255), transparent);  
   }
 
+#coluna-imagem-main-destaques {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.botao-imagem-main-destaques{
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 25px;
+}
+
+.botao-imagem-main-destaques:hover {
+    cursor: pointer;
+}
+
+.imagem-main-destaques {
+    position: relative;
+}
+
+.imagem-main-destaques > img {
+    width: 95%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.imagem-main-destaques > label {
+    position: absolute;
+    left: 5%;
+    top: 68%;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px black;
+}
+
+
+
+
+
+
+
  footer {
     position: fixed;
     bottom: 0;
