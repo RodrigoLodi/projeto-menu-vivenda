@@ -113,19 +113,18 @@ header {
 
 
 
-#coluna-imagem-main-destaques {
+  #coluna-imagem-main-destaques {
     margin-top: 20px;
     text-align: center;
+    position: relative;
+    display: inline-block;
 }
-
-#coluna-imagem-main-destaques > a:hover, .imagem-main-destaques > label {
-    cursor: pointer;
-} 
 
 .botao-imagem-main-destaques{
     width: 95%;
     background-color: transparent;
     border: none;
+    margin-bottom: 10px;
 }
 
 .botao-imagem-main-destaques:hover {
@@ -144,17 +143,21 @@ header {
 }
 
 .imagem-main-destaques > label {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    position: initial;
+    top: 35%;
     font-size: 1.5em;
     color: white;
     font-weight: bolder;
     text-shadow: 2px 2px 3px black;
 }
 
+#entrada-label {
+    left: 32%;
+}
+
+#petisco-label {
+    left: 35%;
+}
 
 .imagem-desfoque{
     filter: blur(3px);
