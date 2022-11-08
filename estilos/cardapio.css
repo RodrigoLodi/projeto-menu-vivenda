@@ -156,7 +156,7 @@ header {
 }
 
 .imagem-desfoque{
-    filter: blur(4px);
+    filter: blur(2.5px);
 }
 
 
