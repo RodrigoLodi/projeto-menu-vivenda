@@ -155,9 +155,8 @@ header {
     text-shadow: 2px 2px 3px black;
 }
 
-
 .imagem-desfoque{
-    filter: blur(3px);
+    filter: blur(4px);
 }
 
 
