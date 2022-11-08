@@ -147,8 +147,9 @@ header {
 
 .imagem-main-destaques > label {
     position: absolute;
-    left: 5%;
-    top: 68%;
+    left: 0;
+    right: 0;
+    top: 70%;
     font-size: 1.5em;
     color: white;
     font-weight: bolder;
@@ -159,9 +160,7 @@ header {
 
 
 
-
-
- footer {
+footer {
     position: fixed;
     bottom: 0;
     background-color: rgb(80, 80, 80);
