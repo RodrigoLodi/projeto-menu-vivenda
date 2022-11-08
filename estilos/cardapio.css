@@ -113,37 +113,37 @@ header {
 
 
 
-#coluna-imagem-main-destaques {
+#coluna-imagem-main-cardapio {
     margin-top: 20px;
     text-align: center;
 }
 
-#coluna-imagem-main-destaques > a:hover, .imagem-main-destaques > label {
+#coluna-imagem-main-cardapio > a:hover, .imagem-main-cardapio > label {
     cursor: pointer;
 } 
 
-.botao-imagem-main-destaques{
+.botao-imagem-main-cardapio{
     width: 95%;
     background-color: transparent;
     border: none;
 }
 
-.botao-imagem-main-destaques:hover {
+.botao-imagem-main-cardapio:hover {
     cursor: pointer;
 }
 
-.imagem-main-destaques {
+.imagem-main-cardapio {
     position: relative;
 
 }
 
-.imagem-main-destaques > img {
+.imagem-main-cardapio > img {
     width: 95%;
     border-radius: 10px;
     margin: auto;
 }
 
-.imagem-main-destaques > label {
+.imagem-main-cardapio > label {
     position: absolute;
     left: 0;
     right: 0;

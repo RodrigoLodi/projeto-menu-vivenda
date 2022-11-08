@@ -109,34 +109,34 @@ header {
     background-image: linear-gradient(to right, transparent, rgb(255, 255, 255), transparent);  
   }
 
-  #coluna-imagem-main-destaques {
+  #coluna-imagem-main-promocoes {
     margin-top: 20px;
     text-align: center;
 }
 
-.botao-imagem-main-destaques{
+.botao-imagem-main-promocoes{
     width: 95%;
     background-color: transparent;
     border: none;
     margin-bottom: 25px;
 }
 
-.botao-imagem-main-destaques:hover {
+.botao-imagem-main-promocoes:hover {
     cursor: pointer;
 }
 
-.imagem-main-destaques {
+.imagem-main-promocoes {
     position: relative;
 
 }
 
-.imagem-main-destaques > img {
+.imagem-main-promocoes > img {
     width: 95%;
     border-radius: 10px;
     margin: auto;
 }
 
-.imagem-main-destaques > label {
+.imagem-main-promocoes > label {
     position: absolute;
     left: 0;
     right: 0;
