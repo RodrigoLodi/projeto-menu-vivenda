@@ -47,10 +47,6 @@ header {
     border-color: green !important;
 }
 
-#fechar-modal {
-    
-}
-
 #destaques-header, #cardapio-header, #ofertas-header {
     margin-top: 20px;
     font-size: 0.7em;
@@ -60,9 +56,6 @@ header {
 #destaques-header a, #cardapio-header a, #ofertas-header a{
     text-decoration: none;
 }
-
-
-
 
 .link-header > img {
     width: 23px;
@@ -120,7 +113,7 @@ header {
     width: 95%;
     background-color: transparent;
     border: none;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .botao-imagem-main-destaques:hover {
@@ -128,28 +121,42 @@ header {
 }
 
 .imagem-main-destaques {
-    position: relative;
-
+    width: 85%;
+    margin: auto;
 }
 
 .imagem-main-destaques > img {
-    width: 95%;
+    width: 100%;
     border-radius: 10px;
     margin: auto;
 }
 
-.imagem-main-destaques > label {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 70%;
-    font-size: 1.5em;
+.nome-prato-main-destaque {
     color: white;
-    font-weight: bolder;
-    text-shadow: 2px 2px 4px black;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
+.preco-prato-main-destaque {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
+#modal-label-destaque1 {
+    font-weight: bolder;
+}
+
+.descricao-modal {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.conteudo-descricao-modal {
+    margin-top: 5px;
+    text-align: justify;
+}
 
 
 #coluna-imagem-main-cardapio {
@@ -206,10 +213,10 @@ header {
 }
 
 .botao-imagem-main-promocoes{
-    width: 95%;
+    width: 85%;
     background-color: transparent;
     border: none;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .botao-imagem-main-promocoes:hover {
@@ -237,9 +244,6 @@ header {
     font-weight: bolder;
     text-shadow: 2px 2px 4px black;
 }
-
-
-
 
 footer {
     position: fixed;

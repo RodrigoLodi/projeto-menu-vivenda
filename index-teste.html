@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="bootstrap/bootstrap-5.2.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/bootstrap-5.2.2-dist/css/bootstrap-utilities.css">
     <link rel="stylesheet" href="bootstrap/bootstrap-5.2.2-dist/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="estilos/index-teste.css">
+    <link rel="stylesheet" href="index-teste.css">
     <title>Menu Vivenda</title>
 </head>
 <body>
@@ -70,47 +70,94 @@
                     </ul>
                 </div>
                 <div class="tab-content" id="pills-tabContent">
+
+                    <!--DESTAQUES-->
                     <div class="tab-pane fade show active" id="pills-destaques" role="tabpanel" aria-labelledby="pills-destaques-tab">
                         <div class="col-12" id="coluna-imagem-main-destaques">
-                            <button class="botao-imagem-main-destaques">
+
+                            <!--Botao Item 1 Destaque-->
+                            <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque1">
                                 <div class="imagem-main-destaques">
                                     <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
-                                    <label>ARROZ COM CAMARÃO</label>
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+                                            <p class="nome-prato-main-destaque">CAMARÃO ORIENTAL</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="preco-prato-main-destaque">R$ 00,00</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </button>
+                            <!--Fim Botao Item 1 Destaque-->
+
+                        <!--Modal Item 1 Destaque-->
+                        <div class="modal fade" id="modal-destaque1" tabindex="-1" aria-labelledby="modal-label-destaque1" aria-hidden="true">
+                            <div class="modal-dialog modal-fullscreen">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="modal-label-destaque1">CAMARÃO ORIENTAL</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="imagem-main-destaques">
+                                            <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
+                                        </div>
+                                        <h1 class="descricao-modal">Descrição</h1>
+                                        <p class="conteudo-descricao-modal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolorum obcaecati beatae numquam suscipit minus quos explicabo soluta voluptatibus incidunt tempore eveniet illum nulla fugiat provident dolorem nobis aperiam praesentium!</p>
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                                        <button type="button" class="btn btn-primary">Adicionar ao carrinho</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fim Modal Item 1 Destaque-->
                             <button class="botao-imagem-main-destaques">
                                 <div class="imagem-main-destaques">
                                     <img src="imagem/main/86469d13d0064b5b81515a09b22eaeea.jpg">
-                                    <label>RISOTO DE CAMARÃO</label>
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+                                            <p class="nome-prato-main-destaque">RISOTO DE CAMARÃO</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="preco-prato-main-destaque">R$ 00,00</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </button>
                             <button class="botao-imagem-main-destaques">
                                 <div class="imagem-main-destaques">
                                     <img src="imagem/main/918c973ada884b038a22997d5340d9a7.jpg">
-                                    <label>BOLINHO DE CAMARÃO</label>
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+                                            <p class="nome-prato-main-destaque">BOLINHO DE CAMARÃO</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="preco-prato-main-destaque">R$ 00,00</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </button>
                             <button class="botao-imagem-main-destaques">
                                 <div class="imagem-main-destaques">
                                     <img src="imagem/main/cedf46d1439f45a2a5c41fd73e931109.jpg">
-                                    <label>CAMARÃO COM FRITAS</label>
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+                                            <p class="nome-prato-main-destaque">CAMARÃO COM FRITAS</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="preco-prato-main-destaque">R$ 00,00</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </button>
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+                    <!--CARDAPIO-->
                     <div class="tab-pane fade" id="pills-cardapio" role="tabpanel" aria-labelledby="pills-cardapio-tab">
                         <div class="col-12" id="coluna-imagem-main-cardapio">
                             <a href="/cardapio/entradas.html">
@@ -204,18 +251,7 @@
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+                    <!--OFERTAS-->
                     <div class="tab-pane fade" id="pills-promocoes" role="tabpanel" aria-labelledby="pills-promocoes-tab">
                         <div class="col-12" id="coluna-imagem-main-promocoes">
                             <button class="botao-imagem-main-promocoes">
