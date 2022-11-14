@@ -26,6 +26,24 @@
                     </div>
             </div>
         </header>
+        <nav>
+            <div class="row gx-0" id="linha-nav">
+                <ul class="nav nav-pills" id="pills-tab" role="tablist" style="margin: 0;">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active link-header" id="pills-destaques-tab" data-bs-toggle="pill" data-bs-target="#pills-destaques" type="button" role="tab" aria-controls="pills-destaques" aria-selected="true" id="botao-destaques"><img src="imagem/header/estrela.png" alt="estrela.png"> DESTAQUES</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link link-header" id="pills-cardapio-tab" data-bs-toggle="pill" data-bs-target="#pills-cardapio" type="button" role="tab" aria-controls="pills-cardapio" aria-selected="false" id="botao-cardapio"><img src="imagem/header/cardapio.png" alt="cardapio"> CARDÁPIO</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link link-header" id="pills-promocoes-tab" data-bs-toggle="pill" data-bs-target="#pills-promocoes" type="button" role="tab" aria-controls="pills-promocoes" aria-selected="false" id="botao-promocoes"><img src="imagem/header/promocoes.png" alt=""> OFERTAS</button>
+                        </li>
+                </ul>
+            </div>
+            <div id="linha-separador-conteudo">
+                <hr><hr><hr><hr><hr class="hr">
+            </div>
+        </nav>
         <main>
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -50,25 +68,7 @@
                 </div>
             </div>
             <!-- Modal -->
-            <div id="linha-separador-conteudo">
-                <hr><hr><hr class="hr">
-            </div>
-        <div class="tab-content" id="pills-tabContent">    
-
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="row gx-0" id="linha-nav">
-                    <ul class="nav nav-pills" id="pills-tab" role="tablist" style="margin: 0;">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active link-header" id="pills-destaques-tab" data-bs-toggle="pill" data-bs-target="#pills-destaques" type="button" role="tab" aria-controls="pills-destaques" aria-selected="true" id="botao-destaques"><img src="imagem/header/estrela.png" alt="estrela.png"> DESTAQUES</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link link-header" id="pills-cardapio-tab" data-bs-toggle="pill" data-bs-target="#pills-cardapio" type="button" role="tab" aria-controls="pills-cardapio" aria-selected="false" id="botao-cardapio"><img src="imagem/header/cardapio.png" alt="cardapio"> CARDÁPIO</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link link-header" id="pills-promocoes-tab" data-bs-toggle="pill" data-bs-target="#pills-promocoes" type="button" role="tab" aria-controls="pills-promocoes" aria-selected="false" id="botao-promocoes"><img src="imagem/header/promocoes.png" alt=""> OFERTAS</button>
-                            </li>
-                    </ul>
-                </div>
+            <div class="row gx-0">
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-destaques" role="tabpanel" aria-labelledby="pills-destaques-tab">
                         <div class="col-12" id="coluna-imagem-main-destaques">
@@ -98,18 +98,6 @@
                             </button>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
                     <div class="tab-pane fade" id="pills-cardapio" role="tabpanel" aria-labelledby="pills-cardapio-tab">
                         <div class="col-12" id="coluna-imagem-main-cardapio">
@@ -202,20 +190,8 @@
                                 </button>
                             </a>
                         </div>
+                        <p style="color: #1e1e1e">gambiarra, favor ignorar</p>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <div class="tab-pane fade" id="pills-promocoes" role="tabpanel" aria-labelledby="pills-promocoes-tab">
                         <div class="col-12" id="coluna-imagem-main-promocoes">
                             <button class="botao-imagem-main-promocoes">
@@ -243,38 +219,40 @@
                                 </div>
                             </button>
                         </div>
+                        <p style="color: #1e1e1e">gambiarra, favor ignorar</p>
+                        <p style="color: #1e1e1e">gambiarra, favor ignorar</p>
                     </div>
-                </div>
+                  </div>
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-
-            </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-
-            </div>
-            <p style="color: #1e1e1e">gambiarra, favor ignorar</p>
-            <p style="color: #1e1e1e">gambiarra, favor ignorar</p>
-        </div>
+            <p style="color: #1e1e1e">gambiarra, favor ignorar!</p>
+            <p style="color: #1e1e1e">gambiarra, favor ignorar!</p>
         </main>
         <footer>
-            <div class="row gx-0" class="div-footer">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <div class="col-4">
-                        <li class="nav-item" role="presentation" class="footer-item">
-                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><img src="imagem/header/cardapio.png" alt="cardapio" style="width: 20px; margin-bottom: 3px;"> Menu</button>
-                        </li>
-                    </div>
-                    <div class="col-4">
-                        <li class="nav-item" role="presentation" class="footer-item">
-                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><img src="imagem/header/estrela.png" alt="cardapio" style="width: 20px; margin-bottom: 3px;"> Avalie</button>
-                        </li>
-                    </div>
-                    <div class="col-4">
-                        <li class="nav-item" role="presentation" class="footer-item">
-                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><img src="imagem/header/meus-pedidos.png" alt="cardapio" style="width: 20px; margin-bottom: 3px;">  Pedidos</button>
-                        </li>
-                    </div>
-                </ul>
+            <div class="row gx-0">
+                <div class="col-4">
+                    <a href="index.html" class="link-rodape">
+                        <div class="div-rodape-imagem"><img src="imagem/header/cardapio-laranja.png" alt="Menu" class="imagem-rodape"></div>
+                        <div class="div-rodape-texto" id="menu-footer">
+                            MENU
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="avalie.html" class="link-rodape">
+                        <div class="div-rodape-imagem"><img src="imagem/header/estrela.png" alt="avalie" class="imagem-rodape"></div>
+                        <div class="div-rodape-texto" id="avalie-footer">
+                            AVALIE
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="pedidos.html" class="link-rodape">
+                        <div class="div-rodape-imagem"><img src="imagem/header/meus-pedidos.png" alt="meus-pedidos" class="imagem-rodape"></div>
+                        <div class="div-rodape-texto" id="pedidos-footer">
+                            MEUS PEDIDOS
+                        </div>
+                    </a>
+                </div>
             </div>
         </footer>
     </section>
