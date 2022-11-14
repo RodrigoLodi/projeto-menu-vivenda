@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="bootstrap/bootstrap-5.2.2-dist/css/bootstrap-reboot.css">
     <link rel="stylesheet" href="index-teste.css">
     <title>Menu Vivenda</title>
+
+    <script type="text/javascript">
+        function id( el ){
+                return document.getElementById( el );
+        }
+        window.onload = function(){
+                id('mais').onclick = function(){
+                        id('format').value = parseInt( id('format').value )+1;
+                }
+                id('menos').onclick = function(){
+                        if( id('format').value>0 )
+                                id('format').value = parseInt( id('format').value )-1;
+                }
+        }       
+        </script>
 </head>
 <body>
     <section>
@@ -105,7 +120,9 @@
                                         </div>
                                         <h1 class="descricao-modal">Descrição</h1>
                                         <p class="conteudo-descricao-modal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolorum obcaecati beatae numquam suscipit minus quos explicabo soluta voluptatibus incidunt tempore eveniet illum nulla fugiat provident dolorem nobis aperiam praesentium!</p>
-                                        
+                                        <input type="button" name="menos" id="menos" value="-"/>
+                                        <input type="text" name="format" value="0" id="format" size="2"/>
+                                        <input type="button" name="mais" id="mais" value="+" />
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
