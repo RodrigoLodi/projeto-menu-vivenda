@@ -47,10 +47,6 @@ header {
     border-color: green !important;
 }
 
-#fechar-modal {
-    
-}
-
 #destaques-header, #cardapio-header, #ofertas-header {
     margin-top: 20px;
     font-size: 0.7em;
@@ -60,9 +56,6 @@ header {
 #destaques-header a, #cardapio-header a, #ofertas-header a{
     text-decoration: none;
 }
-
-
-
 
 .link-header > img {
     width: 23px;
@@ -148,9 +141,6 @@ header {
     font-weight: bolder;
     text-shadow: 2px 2px 4px black;
 }
-
-
-
 
 #coluna-imagem-main-cardapio {
     margin-top: 20px;
