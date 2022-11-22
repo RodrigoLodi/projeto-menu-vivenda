@@ -350,17 +350,17 @@
                                     </button>
                                 </div>
                                 <div class="col-8">
-                                    <h1 class="modal-title fs-5" id="modal-label-destaque">CAMARÃO ORIENTAL</h1>
+                                    <h1 class="modal-title fs-5" id="titulo-modal-destaque">CAMARÃO ORIENTAL</h1>
                                 </div>
                                 <div class="col-2"><button type="button" class="btn-close botao-fechar" data-bs-dismiss="modal" aria-label="Close"></button></div>
                             </div>
                         </div>
                         <div class="modal-body">
-                            <div class="imagem-main-destaques">
+                            <div class="imagem-main-destaques" id="imagem-modal-destaque">
                                 <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
                             </div>
                             <h1 class="descricao-modal">Descrição</h1>
-                            <p class="conteudo-descricao-modal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolorum obcaecati beatae numquam suscipit minus quos explicabo soluta voluptatibus incidunt tempore eveniet illum nulla fugiat provident dolorem nobis aperiam praesentium!</p>
+                            <p class="conteudo-descricao-modal" id="descricao-modal-destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolorum obcaecati beatae numquam suscipit minus quos explicabo soluta voluptatibus incidunt tempore eveniet illum nulla fugiat provident dolorem nobis aperiam praesentium!</p>
                         </div>
                         <div class="modal-footer">
                             <div class="modal-quantidade">
@@ -368,12 +368,19 @@
                                 <input type="text" name="format" value="1" id="format" size="2" class="botao-quantidade-modal"/>
                                 <input type="button" name="mais" id="mais" value="+" class="botao-mais-modal"/>
                             </div>  
-                            <button type="button" class="adicionar-carrinho" >Adicionar ao carrinho</button>
+                            <button type="button" class="adicionar-carrinho">Adicionar ao carrinho</button>
                         </div>
                     </div>
                 </div>
             </div>
             </div>
+
+            <script>
+                modalTitle = document.getElementById('titulo-modal-destaque')
+                title = document.getElementById('fon')
+                modalTitle.textContent = title
+            </script>
+           
 
                 <!--Botao 1 AVALIE-->
                 <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1">
@@ -381,7 +388,7 @@
                         <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
                         <div class="row gx-0">
                             <div class="col-8">
-                                <p class="nome-prato-main-destaque">CAMARÃO ORIENTAL</p>
+                                <p class="nome-prato-main-destaque" id="fon">CAMARÃO aaa</p>
                             </div>
                             <div class="col-4">
                                 <p class="preco-prato-main-destaque">R$ 00,00</p>
@@ -440,5 +447,6 @@
         }       
     </script>
     <script src="bootstrap/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 </html>
