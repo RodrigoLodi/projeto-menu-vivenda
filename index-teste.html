@@ -376,7 +376,7 @@
             </div>
             
                 <!--Botao 1 AVALIE-->
-                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-codigo="1">
+                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="1">
                     <div class="imagem-main-destaques">
                         <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg" id="fon2">
                         <div class="row gx-0">
@@ -393,16 +393,24 @@
 
                 <script>
                     var dados = {
-                        {id: 1, titulo: 'BOLINHO DE BACALHAU', imagem: 'imagem/main/cardapio/entradas.jpg', valor: 20, descricao: 'isso eh um teste'},
-                        {id: 2, titulo: 'CAMARÃO FRITO COM BATATA', imagem: 'imagem/main/cardapio/petiscos.jpg', valor: 30, descricao: 'isso eh um teste'},
-                        {id: 3, titulo: 'SALADA CASUAL', imagem: 'imagem/main/cardapio/saladas.jpg', valor: 40, descricao: 'isso eh um teste'},
-                        {id: 4, titulo: 'TAGLIERINI AO MOHLO DI MARE', imagem: 'imagem/main/cardapio/massas.jpg', valor: 50, descricao: 'isso eh um teste'},
-                        {id: 5, titulo: 'Risoto Tailandês', imagem: 'imagem/main/cardapio/risotos.jpg', valor: 60, descricao: 'isso eh um teste'},
-                        {id: 6, titulo: 'Peixe Empanado', imagem: 'imagem/main/cardapio/tradicionais.jpg', valor: 70, descricao: 'isso eh um teste'},
-                        {id: 7, titulo: 'Camarão Oriental', imagem: 'imagem/main/cardapio/grelhados.jpg', valor: 80, descricao: 'isso eh um teste'},
-                        {id: 8, titulo: 'Paella Vivenda', imagem: 'imagem/main/cardapio/especialidades.jpg', valor: 90, descricao: 'isso eh um teste'},
+                        item_1: {titulo: 'BOLINHO DE BACALHAU', imagem: 'imagem/main/cardapio/entradas.jpg', valor: 20, desc: 'isso eh um teste'},
+                        item_2: {titulo: 'CAMARÃO FRITO COM BATATA', imagem: 'imagem/main/cardapio/petiscos.jpg', valor: 30, descricao: 'isso eh um teste'},
+                        item_3: {titulo: 'SALADA CASUAL', imagem: 'imagem/main/cardapio/saladas.jpg', valor: 40, descricao: 'isso eh um teste'},
+                        item_4: {titulo: 'TAGLIERINI AO MOHLO DI MARE', imagem: 'imagem/main/cardapio/massas.jpg', valor: 50, descricao: 'isso eh um teste'},
+                        item_5: {titulo: 'Risoto Tailandês', imagem: 'imagem/main/cardapio/risotos.jpg', valor: 60, descricao: 'isso eh um teste'},
+                        item_6: {titulo: 'Peixe Empanado', imagem: 'imagem/main/cardapio/tradicionais.jpg', valor: 70, descricao: 'isso eh um teste'},
+                        item_7: {titulo: 'Camarão Oriental', imagem: 'imagem/main/cardapio/grelhados.jpg', valor: 80, descricao: 'isso eh um teste'},
+                        item_8: {titulo: 'Paella Vivenda', imagem: 'imagem/main/cardapio/especialidades.jpg', valor: 90, descricao: 'isso eh um teste'}
                     }
                     
+                    const button = event.relatedTarget
+                    const id = button.getAttribute('data-id')
+                    id = 1
+                    const modalTitle = document.getElementById('titulo-modal-destaque')
+                    const title = dados['item_' + id].titulo.textContent
+                    modalTitle.textContent = title.textContent
+                    alert (modalTitle)
+        
                 </script>
 
             
