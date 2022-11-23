@@ -221,6 +221,10 @@ header {
     font-weight: 400;
 }
 
+.adicionar-carrinho > p {
+    margin: 0;
+}
+
 #coluna-imagem-main-cardapio {
     margin-top: 20px;
     text-align: center;
