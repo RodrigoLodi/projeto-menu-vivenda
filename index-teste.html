@@ -30,7 +30,7 @@
             </div>
         </header>
         <main>
-            <!-- Modal -->
+            <!-- Modal Carrinho -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
@@ -56,8 +56,11 @@
             <div id="linha-separador-conteudo">
                 <hr><hr><hr class="hr">
             </div>
-        <div class="tab-content" id="pills-tabContent">    
 
+
+        
+        <div class="tab-content" id="pills-tabContent">       
+            <!--MENU-->         
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                 <div class="row gx-0" id="linha-nav">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist" style="margin: 0;">
@@ -72,11 +75,80 @@
                             </li>
                     </ul>
                 </div>
+
+             
                 <div class="tab-content" id="pills-tabContent">
 
                     <!--DESTAQUES-->
                     <div class="tab-pane fade show active" id="pills-destaques" role="tabpanel" aria-labelledby="pills-destaques-tab">
                         <div class="col-12" id="coluna-imagem-main-destaques">
+
+                            <!--Modal-->
+                <div class="modal fade" id="modal-destaque" tabindex="-1" aria-labelledby="modal-label-destaque" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="row gx-0" style="width: 100%">
+                                    <div class="col-2" class="carrinho-modal">
+                                        <button type="button" class="botao-carrinho-modal" data-bs-toggle="modal" data-bs-target="modal-destaque">
+                                            <img src="imagem/header/carrinho-preto.png" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="col-8">
+                                        <h1 class="modal-title fs-5" id="titulo-modal-destaque"></h1>
+                                    </div>
+                                    <div class="col-2"><button type="button" class="btn-close botao-fechar" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="imagem-main-destaques" id="imagem-modal-destaque">
+                                    <img src="" id="modal-imagem">
+                                </div>
+                                <h1 class="descricao-modal">Descrição</h1>
+                                <p class="conteudo-descricao-modal" id="descricao-modal-destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolorum obcaecati beatae numquam suscipit minus quos explicabo soluta voluptatibus incidunt tempore eveniet illum nulla fugiat provident dolorem nobis aperiam praesentium!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="modal-quantidade">
+                                    <input type="button" name="menos" id="menos" value="-" class="botao-menos-modal"/>
+                                    <input type="text" name="format" value="1" id="format" size="2" class="botao-quantidade-modal"/>
+                                    <input type="button" name="mais" id="mais" value="+" class="botao-mais-modal"/>
+                                </div>  
+                                <button type="button" class="adicionar-carrinho"><p class="valor-modal-destaque"></p></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Botao 1 AVALIE-->
+                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="1">
+                    <div class="imagem-main-destaques">
+                        <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
+                        <div class="row gx-0">
+                            <div class="col-8">
+                                <p class="nome-prato-main-destaque">CAMARÃO aaa</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="preco-prato-main-destaque">R$ 00,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <!--Fim Botao 1 AVALIE-->
+                <!--Botao 2 AVALIE-->
+                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="2">
+                    <div class="imagem-main-destaques">
+                        <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
+                        <div class="row gx-0">
+                            <div class="col-8">
+                                <p class="nome-prato-main-destaque">CAMARÃO bbb</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="preco-prato-main-destaque">R$ 00,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <!--Fim Botao 2 AVALIE-->
 
                             <!--Botao Item 1 Destaque-->
                             <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque">
@@ -142,9 +214,22 @@
                         </div>
                     </div>
                     <!--CARDAPIO-->
-                    
+                    <div class="tab-pane fade" id="pills-cardapio" role="tabpanel" aria-labelledby="pills-cardapio-tab">
+                        <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="1">
+                            <div class="imagem-main-destaques">
+                                <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
+                                <div class="row gx-0">
+                                    <div class="col-8">
+                                        <p class="nome-prato-main-destaque">CAMARÃO aaa</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="preco-prato-main-destaque">R$ 00,00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
 
-
+                    </div>
                     <!--OFERTAS-->
                     <div class="tab-pane fade" id="pills-promocoes" role="tabpanel" aria-labelledby="pills-promocoes-tab">
                         <div class="col-12" id="coluna-imagem-main-promocoes">
@@ -176,82 +261,18 @@
                     </div>
                 </div>
             </div>
+
+            <!--AVALIE-->
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <!--Modal-->
-                <div class="modal fade" id="modal-destaque" tabindex="-1" aria-labelledby="modal-label-destaque" aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <div class="row gx-0" style="width: 100%">
-                                    <div class="col-2" class="carrinho-modal">
-                                        <button type="button" class="botao-carrinho-modal" data-bs-toggle="modal" data-bs-target="modal-destaque">
-                                            <img src="imagem/header/carrinho-preto.png" alt="">
-                                        </button>
-                                    </div>
-                                    <div class="col-8">
-                                        <h1 class="modal-title fs-5" id="titulo-modal-destaque"></h1>
-                                    </div>
-                                    <div class="col-2"><button type="button" class="btn-close botao-fechar" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                </div>
-                            </div>
-                            <div class="modal-body">
-                                <div class="imagem-main-destaques" id="imagem-modal-destaque">
-                                    <img src="" id="modal-imagem">
-                                </div>
-                                <h1 class="descricao-modal">Descrição</h1>
-                                <p class="conteudo-descricao-modal" id="descricao-modal-destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolorum obcaecati beatae numquam suscipit minus quos explicabo soluta voluptatibus incidunt tempore eveniet illum nulla fugiat provident dolorem nobis aperiam praesentium!</p>
-                            </div>
-                            <div class="modal-footer">
-                                <div class="modal-quantidade">
-                                    <input type="button" name="menos" id="menos" value="-" class="botao-menos-modal"/>
-                                    <input type="text" name="format" value="1" id="format" size="2" class="botao-quantidade-modal"/>
-                                    <input type="button" name="mais" id="mais" value="+" class="botao-mais-modal"/>
-                                </div>  
-                                <button type="button" class="adicionar-carrinho"><p class="valor-modal-destaque"></p></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-                    <!--Botao 1 AVALIE-->
-                    <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="1">
-                        <div class="imagem-main-destaques">
-                            <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
-                            <div class="row gx-0">
-                                <div class="col-8">
-                                    <p class="nome-prato-main-destaque">CAMARÃO aaa</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="preco-prato-main-destaque">R$ 00,00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </button>
-                    <!--Fim Botao 1 AVALIE-->
-                    <!--Botao 2 AVALIE-->
-                    <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="2">
-                        <div class="imagem-main-destaques">
-                            <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
-                            <div class="row gx-0">
-                                <div class="col-8">
-                                    <p class="nome-prato-main-destaque">CAMARÃO aaa</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="preco-prato-main-destaque">R$ 00,00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </button>
-                    <!--Fim Botao 2 AVALIE-->
-
-
                 
-
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-
             </div>
+
+            <!--PEDIDOS-->
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                
+            </div>
+
+            <!--ESPAÇO GAMBIARRA-->
             <p style="color: #1e1e1e">gambiarra, favor ignorar</p>
             <p style="color: #1e1e1e">gambiarra, favor ignorar</p>
         </div>
@@ -321,13 +342,6 @@
             var modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
             modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
         })
-        
-        var tituloBotao = document.querySelectorAll('.nome-prato-main-destaque')
-        tituloBotao.textContent = 'teste'
-       
-    </script>
-    <script>
-
     </script>
 </body>
 </html>
