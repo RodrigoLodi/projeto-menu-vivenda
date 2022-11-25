@@ -40,10 +40,6 @@
                     </div>
                     <div class="modal-body">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorum neque ipsa repudiandae laudantium maxime aperiam expedita consequatur provident quas fugiat saepe eligendi inventore nihil quia, esse tempora odio! Qui?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorem corrupti magnam ad dolor blanditiis. Saepe, assumenda optio dicta magnam quibusdam, totam reprehenderit quo a eveniet vitae officiis! Cupiditate, magni?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel impedit, perspiciatis nisi sint nihil maxime eum repudiandae, minima, ipsam eveniet quo modi repellendus iure enim quia? Obcaecati ullam doloremque atque!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam error quam dolor optio dicta, nemo libero incidunt voluptates quasi deleniti soluta dolorum! Recusandae quasi nobis molestias sint facilis beatae!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, illo nesciunt neque quis atque dignissimos, placeat, sed voluptatum voluptatem error quia. Hic molestiae ab ut perferendis! Eos magnam modi ab?
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="fechar-modal">Fechar</button>
@@ -52,13 +48,44 @@
                 </div>
                 </div>
             </div>
-            <!-- Modal -->
             <div id="linha-separador-conteudo">
                 <hr><hr><hr class="hr">
             </div>
-
-
-        
+         <!--Modal-->
+         <div class="modal fade" id="modal-destaque" tabindex="-1" aria-labelledby="modal-label-destaque" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="row gx-0" style="width: 100%">
+                            <div class="col-2" class="carrinho-modal">
+                                <button type="button" class="botao-carrinho-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <img src="imagem/header/carrinho-preto.png" alt="">
+                                </button>
+                            </div>
+                            <div class="col-8">
+                                <h1 class="modal-title fs-5" id="titulo-modal-destaque"></h1>
+                            </div>
+                            <div class="col-2"><button type="button" class="btn-close botao-fechar" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="imagem-main-destaques" id="imagem-modal-destaque">
+                            <img src="" id="modal-imagem">
+                        </div>
+                        <h1 class="descricao-modal">Descrição</h1>
+                        <p class="conteudo-descricao-modal" id="descricao-modal-destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolorum obcaecati beatae numquam suscipit minus quos explicabo soluta voluptatibus incidunt tempore eveniet illum nulla fugiat provident dolorem nobis aperiam praesentium!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="modal-quantidade">
+                            <input type="button" name="menos" id="menos" value="-" class="botao-menos-modal"/>
+                            <input type="text" name="format" value="1" id="format" size="2" class="botao-quantidade-modal"/>
+                            <input type="button" name="mais" id="mais" value="+" class="botao-mais-modal"/>
+                        </div>  
+                        <button type="button" class="adicionar-carrinho"><p class="valor-modal-destaque"></p></button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="tab-content" id="pills-tabContent">       
             <!--MENU-->         
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -82,76 +109,8 @@
                     <!--DESTAQUES-->
                     <div class="tab-pane fade show active" id="pills-destaques" role="tabpanel" aria-labelledby="pills-destaques-tab">
                         <div class="col-12" id="coluna-imagem-main-destaques">
-
-                            <!--Modal-->
-                <div class="modal fade" id="modal-destaque" tabindex="-1" aria-labelledby="modal-label-destaque" aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <div class="row gx-0" style="width: 100%">
-                                    <div class="col-2" class="carrinho-modal">
-                                        <button type="button" class="botao-carrinho-modal" data-bs-toggle="modal" data-bs-target="modal-destaque">
-                                            <img src="imagem/header/carrinho-preto.png" alt="">
-                                        </button>
-                                    </div>
-                                    <div class="col-8">
-                                        <h1 class="modal-title fs-5" id="titulo-modal-destaque"></h1>
-                                    </div>
-                                    <div class="col-2"><button type="button" class="btn-close botao-fechar" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                </div>
-                            </div>
-                            <div class="modal-body">
-                                <div class="imagem-main-destaques" id="imagem-modal-destaque">
-                                    <img src="" id="modal-imagem">
-                                </div>
-                                <h1 class="descricao-modal">Descrição</h1>
-                                <p class="conteudo-descricao-modal" id="descricao-modal-destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolorum obcaecati beatae numquam suscipit minus quos explicabo soluta voluptatibus incidunt tempore eveniet illum nulla fugiat provident dolorem nobis aperiam praesentium!</p>
-                            </div>
-                            <div class="modal-footer">
-                                <div class="modal-quantidade">
-                                    <input type="button" name="menos" id="menos" value="-" class="botao-menos-modal"/>
-                                    <input type="text" name="format" value="1" id="format" size="2" class="botao-quantidade-modal"/>
-                                    <input type="button" name="mais" id="mais" value="+" class="botao-mais-modal"/>
-                                </div>  
-                                <button type="button" class="adicionar-carrinho"><p class="valor-modal-destaque"></p></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Botao 1 AVALIE-->
-                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="1">
-                    <div class="imagem-main-destaques">
-                        <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
-                        <div class="row gx-0">
-                            <div class="col-8">
-                                <p class="nome-prato-main-destaque">CAMARÃO aaa</p>
-                            </div>
-                            <div class="col-4">
-                                <p class="preco-prato-main-destaque">R$ 00,00</p>
-                            </div>
-                        </div>
-                    </div>
-                </button>
-                <!--Fim Botao 1 AVALIE-->
-                <!--Botao 2 AVALIE-->
-                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="2">
-                    <div class="imagem-main-destaques">
-                        <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
-                        <div class="row gx-0">
-                            <div class="col-8">
-                                <p class="nome-prato-main-destaque">CAMARÃO bbb</p>
-                            </div>
-                            <div class="col-4">
-                                <p class="preco-prato-main-destaque">R$ 00,00</p>
-                            </div>
-                        </div>
-                    </div>
-                </button>
-                <!--Fim Botao 2 AVALIE-->
-
                             <!--Botao Item 1 Destaque-->
-                            <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque">
+                            <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="1">
                                 <div class="imagem-main-destaques">
                                     <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
                                     <div class="row gx-0">
@@ -166,7 +125,7 @@
                             </button>
                             
                             <!--Botão Modal Item 2-->
-                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal">
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="2">
                                     <div class="imagem-main-destaques">
                                         <img src="imagem/main/86469d13d0064b5b81515a09b22eaeea.jpg">
                                         <div class="row gx-0">
@@ -182,7 +141,7 @@
                         
 
                             <!--Botao Modal Item 3-->
-                            <button class="botao-imagem-main-destaques">
+                            <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="3">
                                 <div class="imagem-main-destaques">
                                     <img src="imagem/main/918c973ada884b038a22997d5340d9a7.jpg">
                                     <div class="row gx-0">
@@ -198,7 +157,7 @@
                             
 
                             <!--Botao Modal Item 4-->
-                            <button class="botao-imagem-main-destaques">
+                            <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="4">
                                 <div class="imagem-main-destaques">
                                     <img src="imagem/main/cedf46d1439f45a2a5c41fd73e931109.jpg">
                                     <div class="row gx-0">
@@ -233,28 +192,60 @@
                     <!--OFERTAS-->
                     <div class="tab-pane fade" id="pills-promocoes" role="tabpanel" aria-labelledby="pills-promocoes-tab">
                         <div class="col-12" id="coluna-imagem-main-promocoes">
-                            <button class="botao-imagem-main-promocoes">
-                                <div class="imagem-main-promocoes">
+                             <!--Botao Item 1 OFERTAS-->
+                             <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="5">
+                                <div class="imagem-main-destaques">
                                     <img src="imagem/main/promocoes/2af26e6bb86047b28d9d97dc7a178116.jpg">
-                                    <label>BOBO DE CAMARÃO</label>
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+                                            <p class="nome-prato-main-destaque">BOBO DE CAMARÃO</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="preco-prato-main-destaque">R$ 00,00</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </button>
-                            <button class="botao-imagem-main-promocoes">
-                                <div class="imagem-main-promocoes">
+
+                            <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="6">
+                                <div class="imagem-main-destaques">
                                     <img src="imagem/main/promocoes/9ff67210372e4f35a084b7f033caba9c.jpg">
-                                    <label>PORÇÃO DE CAMARÃO</label>
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+                                            <p class="nome-prato-main-destaque">PORÇÃO DE CAMARÃO</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="preco-prato-main-destaque">R$ 00,00</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </button>
-                            <button class="botao-imagem-main-promocoes">
-                                <div class="imagem-main-promocoes">
+
+                            <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="7">
+                                <div class="imagem-main-destaques">
                                     <img src="imagem/main/promocoes/cba17540951c45d79f5d7017a7852dbb.jpg">
-                                    <label>CASQUINHA DE CAMARÃO</label>
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+                                            <p class="nome-prato-main-destaque">CASQUINHA DE CAMARÃO</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="preco-prato-main-destaque">R$ 00,00</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </button>
-                            <button class="botao-imagem-main-promocoes">
-                                <div class="imagem-main-promocoes">
+
+                            <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="8">
+                                <div class="imagem-main-destaques">
                                     <img src="imagem/main/promocoes/dcbbe588963740efb5ae0b08bd350516.jpg">
-                                    <label>RISOTO PROVENÇAL</label>
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+                                            <p class="nome-prato-main-destaque">RISOTO PROVENÇAL</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="preco-prato-main-destaque">R$ 00,00</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </button>
                         </div>
@@ -306,14 +297,14 @@
     <script src="bootstrap/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var dados = {
-            item_1: {titulo: 'BOLINHO DE BACALHAU', imagem: 'imagem/main/cardapio/entradas.jpg', valor: '20,00', descricao: 'isso eh um teste'},
-            item_2: {titulo: 'CAMARÃO FRITO COM BATATA', imagem: 'imagem/main/cardapio/petiscos.jpg', valor: '30,00', descricao: 'isso eh um teste'},
-            item_3: {titulo: 'SALADA CASUAL', imagem: 'imagem/main/cardapio/saladas.jpg', valor: '40,00', descricao: 'isso eh um teste'},
-            item_4: {titulo: 'TAGLIERINI AO MOHLO DI MARE', imagem: 'imagem/main/cardapio/massas.jpg', valor: '50,00', descricao: 'isso eh um teste'},
-            item_5: {titulo: 'Risoto Tailandês', imagem: 'imagem/main/cardapio/risotos.jpg', valor: '60,00', descricao: 'isso eh um teste'},
-            item_6: {titulo: 'Peixe Empanado', imagem: 'imagem/main/cardapio/tradicionais.jpg', valor: '70,00', descricao: 'isso eh um teste'},
-            item_7: {titulo: 'Camarão Oriental', imagem: 'imagem/main/cardapio/grelhados.jpg', valor: '80,00', descricao: 'isso eh um teste'},
-            item_8: {titulo: 'Paella Vivenda', imagem: 'imagem/main/cardapio/especialidades.jpg', valor: '90,00', descricao: 'isso eh um teste'}
+            item_1: {titulo: 'CAMARÃO ORIENTAL', imagem: 'imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg', valor: '20,00', descricao: 'isso eh um teste'},
+            item_2: {titulo: 'RISOTO DE CAMARÃO', imagem: 'imagem/main/86469d13d0064b5b81515a09b22eaeea.jpg', valor: '30,00', descricao: 'isso eh um teste'},
+            item_3: {titulo: 'BOLINHO DE CAMARÃO', imagem: 'imagem/main/918c973ada884b038a22997d5340d9a7.jpg', valor: '40,00', descricao: 'isso eh um teste'},
+            item_4: {titulo: 'CAMARÃO COM FRITAS', imagem: 'imagem/main/cedf46d1439f45a2a5c41fd73e931109.jpg', valor: '50,00', descricao: 'isso eh um teste'},
+            item_5: {titulo: 'BOBO DE CAMARÃO', imagem: 'imagem/main/promocoes/2af26e6bb86047b28d9d97dc7a178116.jpg', valor: '60,00', descricao: 'isso eh um teste'},
+            item_6: {titulo: 'PORÇÃO DE CAMARÃO', imagem: 'imagem/main/promocoes/9ff67210372e4f35a084b7f033caba9c.jpg', valor: '70,00', descricao: 'isso eh um teste'},
+            item_7: {titulo: 'CASQUINHA DE CAMARÃO', imagem: 'imagem/main/promocoes/cba17540951c45d79f5d7017a7852dbb.jpg', valor: '80,00', descricao: 'isso eh um teste'},
+            item_8: {titulo: 'RISOTO PROVENÇAL', imagem: 'imagem/main/promocoes/dcbbe588963740efb5ae0b08bd350516.jpg', valor: '90,00', descricao: 'isso eh um teste'}
         }
 
         function coletar_dados(id) {
