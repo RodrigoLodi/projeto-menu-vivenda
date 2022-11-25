@@ -344,7 +344,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <div class="row gx-0" style="width: 100%">
-                                <div class="col-2">
+                                <div class="col-2" class="carrinho-modal">
                                     <button type="button" class="botao-carrinho-modal" data-bs-toggle="modal" data-bs-target="modal-destaque">
                                         <img src="imagem/header/carrinho-preto.png" alt="">
                                     </button>
@@ -392,7 +392,7 @@
                 <!--Fim Botao 1 AVALIE-->
 
                 <!--Botao 2 AVALIE-->
-                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="2" onclick="coletar_id()">
+                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="2">
                     <div class="imagem-main-destaques">
                         <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg" id="fon2">
                         <div class="row gx-0">
@@ -408,46 +408,7 @@
                 <!--Fim Botao 2 AVALIE-->
 
 
-                <script>
-                    var dados = {
-                        item_1: {titulo: 'BOLINHO DE BACALHAU', imagem: 'imagem/main/cardapio/entradas.jpg', valor: '20,00', descricao: 'isso eh um teste'},
-                        item_2: {titulo: 'CAMARÃO FRITO COM BATATA', imagem: 'imagem/main/cardapio/petiscos.jpg', valor: '30,00', descricao: 'isso eh um teste'},
-                        item_3: {titulo: 'SALADA CASUAL', imagem: 'imagem/main/cardapio/saladas.jpg', valor: '40,00', descricao: 'isso eh um teste'},
-                        item_4: {titulo: 'TAGLIERINI AO MOHLO DI MARE', imagem: 'imagem/main/cardapio/massas.jpg', valor: '50', descricao: 'isso eh um teste'},
-                        item_5: {titulo: 'Risoto Tailandês', imagem: 'imagem/main/cardapio/risotos.jpg', valor: '60,00', descricao: 'isso eh um teste'},
-                        item_6: {titulo: 'Peixe Empanado', imagem: 'imagem/main/cardapio/tradicionais.jpg', valor: '70,00', descricao: 'isso eh um teste'},
-                        item_7: {titulo: 'Camarão Oriental', imagem: 'imagem/main/cardapio/grelhados.jpg', valor: '80,00', descricao: 'isso eh um teste'},
-                        item_8: {titulo: 'Paella Vivenda', imagem: 'imagem/main/cardapio/especialidades.jpg', valor: '90,00', descricao: 'isso eh um teste'}
-                    }
-
-                    function coletar_dados(id) {
-                        return {
-                            titulo: dados['item_'+id].titulo,
-                            descricao: dados['item_'+id].descricao,
-                            imagem: dados['item_'+id].imagem,
-                            valor: dados['item_'+id].valor,
-                        }
-                    }
-
-                    const destaqueModal = document.getElementById('modal-destaque')
-                    destaqueModal.addEventListener('show.bs.modal', event => {
-                        var button = event.relatedTarget
-                        
-                        var id = button.getAttribute('data-id')
-
-                        var dados_atualizar = coletar_dados(id)
- 
-                        var modalTitulo = destaqueModal.querySelector('.modal-title')
-                        modalTitulo.textContent = `${dados_atualizar.titulo}`
-                        var modalImage = destaqueModal.querySelector('.imagem-main-destaque')
-                        document.getElementById('modal-imagem').src = `${dados_atualizar.imagem}`
-                        var modalDescricao = destaqueModal.querySelector('.conteudo-descricao-modal')
-                        modalDescricao.textContent = `${dados_atualizar.descricao}`
-                        var modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
-                        modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
-                    })
-                    
-                </script>
+                
 
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 
@@ -483,7 +444,51 @@
     -->
    
     <script src="bootstrap/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
-    
-  
+    <script>
+        var dados = {
+            item_1: {titulo: 'BOLINHO DE BACALHAU', imagem: 'imagem/main/cardapio/entradas.jpg', valor: '20,00', descricao: 'isso eh um teste'},
+            item_2: {titulo: 'CAMARÃO FRITO COM BATATA', imagem: 'imagem/main/cardapio/petiscos.jpg', valor: '30,00', descricao: 'isso eh um teste'},
+            item_3: {titulo: 'SALADA CASUAL', imagem: 'imagem/main/cardapio/saladas.jpg', valor: '40,00', descricao: 'isso eh um teste'},
+            item_4: {titulo: 'TAGLIERINI AO MOHLO DI MARE', imagem: 'imagem/main/cardapio/massas.jpg', valor: '50,00', descricao: 'isso eh um teste'},
+            item_5: {titulo: 'Risoto Tailandês', imagem: 'imagem/main/cardapio/risotos.jpg', valor: '60,00', descricao: 'isso eh um teste'},
+            item_6: {titulo: 'Peixe Empanado', imagem: 'imagem/main/cardapio/tradicionais.jpg', valor: '70,00', descricao: 'isso eh um teste'},
+            item_7: {titulo: 'Camarão Oriental', imagem: 'imagem/main/cardapio/grelhados.jpg', valor: '80,00', descricao: 'isso eh um teste'},
+            item_8: {titulo: 'Paella Vivenda', imagem: 'imagem/main/cardapio/especialidades.jpg', valor: '90,00', descricao: 'isso eh um teste'}
+        }
+
+        function coletar_dados(id) {
+            return {
+                titulo: dados['item_'+id].titulo,
+                descricao: dados['item_'+id].descricao,
+                imagem: dados['item_'+id].imagem,
+                valor: dados['item_'+id].valor,
+            }
+        }
+
+        const destaqueModal = document.getElementById('modal-destaque')
+        destaqueModal.addEventListener('show.bs.modal', event => {
+            var button = event.relatedTarget
+            
+            var id = button.getAttribute('data-id')
+
+            var dados_atualizar = coletar_dados(id)
+
+            var modalTitulo = destaqueModal.querySelector('.modal-title')
+            modalTitulo.textContent = `${dados_atualizar.titulo}`
+            var modalImage = destaqueModal.querySelector('.imagem-main-destaque')
+            document.getElementById('modal-imagem').src = `${dados_atualizar.imagem}`
+            var modalDescricao = destaqueModal.querySelector('.conteudo-descricao-modal')
+            modalDescricao.textContent = `${dados_atualizar.descricao}`
+            var modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
+            modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
+        })
+
+        var botaoDestaque = document.querySelector('.botao-imagem-main-destaque')
+        botaoDestaque.querySelector('.nome-prato-main-destaque')
+        botaoDestaque.textContent = `${dados_atualizar.titulo}`
+    </script>
+    <script>
+
+    </script>
 </body>
 </html>
