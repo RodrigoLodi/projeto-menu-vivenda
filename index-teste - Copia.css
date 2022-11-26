@@ -226,10 +226,12 @@ header {
 }
 
 .botao-cardapio-rolagem {
-    margin-top: 10px;
+    margin-top: 20px;
     height: 50px;
     display: flex;
     overflow-x: scroll;
+    overflow-y: auto;
+    white-space: nowrap;
 }
 
 #coluna-imagem-main-cardapio {
