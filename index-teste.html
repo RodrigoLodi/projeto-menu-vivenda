@@ -210,16 +210,46 @@
                         </div>
 
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-bebidas" role="tabpanel" aria-labelledby="pills-bebidas-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-entradas" role="tabpanel" aria-labelledby="pills-entradas-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-petiscos" role="tabpanel" aria-labelledby="pills-petiscos-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-saladas" role="tabpanel" aria-labelledby="pills-saladas-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-massas" role="tabpanel" aria-labelledby="pills-massas-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-risotos" role="tabpanel" aria-labelledby="pills-risotos-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-tradicionais" role="tabpanel" aria-labelledby="pills-tradicionais-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-grelhados" role="tabpanel" aria-labelledby="pills-grelhados-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-especialidades" role="tabpanel" aria-labelledby="pills-especialidades-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-sobremesas" role="tabpanel" aria-labelledby="pills-sobremesas-tab" tabindex="0">...</div>
+                            <!--Cardápio Bebidas-->
+                            <div class="tab-pane fade show active" id="pills-bebidas" role="tabpanel" aria-labelledby="pills-bebidas-tab" tabindex="0">
+
+                            </div>
+                            <!--Cardápio Entradas-->
+                            <div class="tab-pane fade" id="pills-entradas" role="tabpanel" aria-labelledby="pills-entradas-tab" tabindex="0">
+
+                            </div>
+                            <!--Cardápio Petiscos-->
+                            <div class="tab-pane fade" id="pills-petiscos" role="tabpanel" aria-labelledby="pills-petiscos-tab" tabindex="0">
+
+                            </div>
+                            <!--Cardápio Saladas-->
+                            <div class="tab-pane fade" id="pills-saladas" role="tabpanel" aria-labelledby="pills-saladas-tab" tabindex="0">
+
+                            </div>
+                            <!--Cardápio Massas-->
+                            <div class="tab-pane fade" id="pills-massas" role="tabpanel" aria-labelledby="pills-massas-tab" tabindex="0">
+
+                            </div>
+                            <!--Cardápio Risotos-->
+                            <div class="tab-pane fade" id="pills-risotos" role="tabpanel" aria-labelledby="pills-risotos-tab" tabindex="0">
+
+                            </div>
+                            <!--Cardápio Tradicionais-->
+                            <div class="tab-pane fade" id="pills-tradicionais" role="tabpanel" aria-labelledby="pills-tradicionais-tab" tabindex="0">
+
+                            </div>
+                            <!--Cardápio Grelhados-->
+                            <div class="tab-pane fade" id="pills-grelhados" role="tabpanel" aria-labelledby="pills-grelhados-tab" tabindex="0">
+
+                            </div>
+                            <!--Cardápio Especialidades-->
+                            <div class="tab-pane fade" id="pills-especialidades" role="tabpanel" aria-labelledby="pills-especialidades-tab" tabindex="0">
+
+                            </div>
+                            <!--Cardápio Sobremesas-->
+                            <div class="tab-pane fade" id="pills-sobremesas" role="tabpanel" aria-labelledby="pills-sobremesas-tab" tabindex="0">
+                                
+                            </div>
                           </div>
                     </div>
                     <!--OFERTAS-->
@@ -329,6 +359,19 @@
    
     <script src="bootstrap/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
     <script>
+         function preco(el){
+                return document.getElementById(el);
+        }
+        window.onload = function(){
+                preco('mais').onclick = function(){
+                        preco('format').value = parseInt( preco('format').value )+1;
+                }
+                preco('menos').onclick = function(){
+                        if( preco('format').value>0 )
+                                preco('format').value = parseInt( preco('format').value )-1;
+                }
+        }       
+
         var dados = {
             item_1: {titulo: 'CAMARÃO ORIENTAL', imagem: 'imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg', valor: '20,00', descricao: 'isso eh um teste'},
             item_2: {titulo: 'RISOTO DE CAMARÃO', imagem: 'imagem/main/86469d13d0064b5b81515a09b22eaeea.jpg', valor: '30,00', descricao: 'isso eh um teste'},
