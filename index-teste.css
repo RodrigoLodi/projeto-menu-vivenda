@@ -230,6 +230,7 @@ header {
     height: 60px;
     width: 100%;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .botao-cardapio-rolagem > ul {
