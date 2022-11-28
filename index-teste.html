@@ -410,5 +410,13 @@
             modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
         })
     </script>
+    <script>
+        var scrollDown = function (evt) {
+            var barraRolagem = document.getElementById('scroll')
+            barraRolagem.scrollTop = barraRolagem.scrollHeight
+        }
+        var botao = document.getElementById('botao-cardapio')
+        botao.onclick = scrollDown
+    </script>
 </body>
 </html>
