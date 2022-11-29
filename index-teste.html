@@ -95,7 +95,7 @@
                                 <button class="nav-link active link-header" id="pills-destaques-tab" data-bs-toggle="pill" data-bs-target="#pills-destaques" type="button" role="tab" aria-controls="pills-destaques" aria-selected="true" id="botao-destaques"><img src="imagem/header/estrela.png" alt="estrela.png"> DESTAQUES</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link link-header" id="pills-cardapio-tab" data-bs-toggle="pill" data-bs-target="#pills-cardapio" type="button" role="tab" aria-controls="pills-cardapio" aria-selected="false" id="botao-cardapio"  onclick="setTimeout(funcaoRolar, 0800); setTimeout(funcaoRolar2, 1500)"><img src="imagem/header/cardapio.png" alt="cardapio"> CARDÁPIO</button>
+                                <button class="nav-link link-header" id="pills-cardapio-tab" data-bs-toggle="pill" data-bs-target="#pills-cardapio" type="button" role="tab" aria-controls="pills-cardapio" aria-selected="false" id="botao-cardapio" onclick="setTimeout(funcaoRolar, 0500); setTimeout(funcaoRolar2, 1000)"><img src="imagem/header/cardapio.png" alt="cardapio"> CARDÁPIO</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link link-header" id="pills-promocoes-tab" data-bs-toggle="pill" data-bs-target="#pills-promocoes" type="button" role="tab" aria-controls="pills-promocoes" aria-selected="false" id="botao-promocoes"><img src="imagem/header/promocoes.png" alt=""> OFERTAS</button>
@@ -183,10 +183,10 @@
                                     <button class="nav-link" id="pills-entradas-tab" data-bs-toggle="pill" data-bs-target="#pills-entradas" type="button" role="tab" aria-controls="pills-entradas" aria-selected="false">Entradas</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                  <button class="nav-link" id="pills-petiscos-tab" data-bs-toggle="pill" data-bs-target="#pills-peticos" type="button" role="tab" aria-controls="pills-petiscos" aria-selected="false">Petiscos</button>
+                                    <button class="nav-link" id="pills-petiscos-tab" data-bs-toggle="pill" data-bs-target="#pills-petiscos" type="button" role="tab" aria-controls="pills-petiscos" aria-selected="false">Petiscos</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-saladas-tab" data-bs-toggle="pill" data-bs-target="#pills-saladas" type="button" role="tab" aria-controls="pills-saladas" aria-selected="true">Saladas</button>
+                                    <button class="nav-link" id="pills-saladas-tab" data-bs-toggle="pill" data-bs-target="#pills-saladas" type="button" role="tab" aria-controls="pills-saladas" aria-selected="false">Saladas</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="pills-massas-tab" data-bs-toggle="pill" data-bs-target="#pills-massas" type="button" role="tab" aria-controls="pills-massas" aria-selected="false">Massas</button>
@@ -195,7 +195,7 @@
                                     <button class="nav-link" id="pills-risotos-tab" data-bs-toggle="pill" data-bs-target="#pills-risotos" type="button" role="tab" aria-controls="pills-risotos" aria-selected="false">Risotos</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-tradicionais-tab" data-bs-toggle="pill" data-bs-target="#pills-tradicionais" type="button" role="tab" aria-controls="pills-tradicionais" aria-selected="true">Tradicionais</button>
+                                    <button class="nav-link" id="pills-tradicionais-tab" data-bs-toggle="pill" data-bs-target="#pills-tradicionais" type="button" role="tab" aria-controls="pills-tradicionais" aria-selected="false">Tradicionais</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="pills-grelhados-tab" data-bs-toggle="pill" data-bs-target="#pills-grelhados" type="button" role="tab" aria-controls="pills-grelhados" aria-selected="false">Grelhados</button>
@@ -209,46 +209,304 @@
                             </ul>
                         </div>
                         <!--NESSA DIV ABAIXO TINHA A CLASS tab-content-->
-                        <div class="tab-cardapio" id="pills-tabContent">
+                        <div class="tab-content" id="pills-tabContent">
                             <!--Cardápio Bebidas-->
                             <div class="tab-pane fade show active" id="pills-bebidas" role="tabpanel" aria-labelledby="pills-bebidas-tab" tabindex="0">
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="9">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/bebidas/coca-lata.png">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">COCA COLA LATA</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 7,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
 
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="10">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/bebidas/coca-2l.png">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">COCA COLA 2L</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 15,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                             <!--Cardápio Entradas-->
                             <div class="tab-pane fade" id="pills-entradas" role="tabpanel" aria-labelledby="pills-entradas-tab" tabindex="0">
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="11">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/entradas/casquinha.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">CASQUINHA VIVENDA</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 50,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
 
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="12">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/entradas/pastel.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">PASTEL DE CAMARÃO</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 60,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                             <!--Cardápio Petiscos-->
                             <div class="tab-pane fade" id="pills-petiscos" role="tabpanel" aria-labelledby="pills-petiscos-tab" tabindex="0">
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="13">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/petiscos/isca-peixe.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">ISCA DE PEIXE COM BATATA</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 70,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
 
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="14">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/petiscos/batata-frita.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">BATATA FRITA</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 30,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                             <!--Cardápio Saladas-->
                             <div class="tab-pane fade" id="pills-saladas" role="tabpanel" aria-labelledby="pills-saladas-tab" tabindex="0">
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="15">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/saladas/salada-casual.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">SALADA CASUAL</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 40,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
 
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="16">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/saladas/salada-mista.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">SALADA MISTA</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 25,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                             <!--Cardápio Massas-->
                             <div class="tab-pane fade" id="pills-massas" role="tabpanel" aria-labelledby="pills-massas-tab" tabindex="0">
-
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="17">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/massas/penne-ao-molho.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Penne ao Molho de Strogonoff de Camarão</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 65,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="18">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/massas/taglierini.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Taglierini ao Molho de Camarão ao Catupiry</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 70,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                             <!--Cardápio Risotos-->
                             <div class="tab-pane fade" id="pills-risotos" role="tabpanel" aria-labelledby="pills-risotos-tab" tabindex="0">
-
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="19">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/risotos/risoto-mare.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Risoto Di Mare</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 75,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="20">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/risotos/risoto-tailandes.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Risoto Tailandês</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 80,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                             <!--Cardápio Tradicionais-->
                             <div class="tab-pane fade" id="pills-tradicionais" role="tabpanel" aria-labelledby="pills-tradicionais-tab" tabindex="0">
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="21">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/tradicionais/peixe-empanado.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Peixe Empanado</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 79,90</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
 
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="22">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/tradicionais/camarao-parmegiana.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Camarão à Parmegiana</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 90,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                             <!--Cardápio Grelhados-->
                             <div class="tab-pane fade" id="pills-grelhados" role="tabpanel" aria-labelledby="pills-grelhados-tab" tabindex="0">
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="23">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/grelhados/camarao-oriental.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Camarão Oriental</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 90,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
 
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="24">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/grelhados/salmao-grelhado.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Salmão Grelhado</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 85,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                             <!--Cardápio Especialidades-->
                             <div class="tab-pane fade" id="pills-especialidades" role="tabpanel" aria-labelledby="pills-especialidades-tab" tabindex="0">
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="25">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/especialidades/paella-vivenda.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Paella Vivenda</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 60,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
 
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="26">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/especialidades/bobo-camarao.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Bobó de Camarão</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 70,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                             <!--Cardápio Sobremesas-->
                             <div class="tab-pane fade" id="pills-sobremesas" role="tabpanel" aria-labelledby="pills-sobremesas-tab" tabindex="0">
-                                
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="27">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/sobremesas/bolo-chocolate.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Bolo Nega Maluca</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 30,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="28">
+                                    <div class="imagem-main-destaques">
+                                        <img src="imagem/main/cardapio/sobremesas/pudim.jpg">
+                                        <div class="row gx-0">
+                                            <div class="col-8">
+                                                <p class="nome-prato-main-destaque">Pudim de Leite Moça</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="preco-prato-main-destaque">R$ 25,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                           </div>
                     </div>
@@ -380,7 +638,27 @@
             item_5: {titulo: 'BOBO DE CAMARÃO', imagem: 'imagem/main/promocoes/2af26e6bb86047b28d9d97dc7a178116.jpg', valor: '60,00', descricao: 'isso eh um teste'},
             item_6: {titulo: 'PORÇÃO DE CAMARÃO', imagem: 'imagem/main/promocoes/9ff67210372e4f35a084b7f033caba9c.jpg', valor: '70,00', descricao: 'isso eh um teste'},
             item_7: {titulo: 'CASQUINHA DE CAMARÃO', imagem: 'imagem/main/promocoes/cba17540951c45d79f5d7017a7852dbb.jpg', valor: '80,00', descricao: 'isso eh um teste'},
-            item_8: {titulo: 'RISOTO PROVENÇAL', imagem: 'imagem/main/promocoes/dcbbe588963740efb5ae0b08bd350516.jpg', valor: '90,00', descricao: 'isso eh um teste'}
+            item_8: {titulo: 'RISOTO PROVENÇAL', imagem: 'imagem/main/promocoes/dcbbe588963740efb5ae0b08bd350516.jpg', valor: '90,00', descricao: 'isso eh um teste'},
+            item_9: {titulo: 'COCA COLA LATA', imagem: 'imagem/main/cardapio/bebidas/coca-lata.png', valor: '7,00', descricao: 'isso eh um teste'},
+            item_10: {titulo: 'COCA COLA 2L', imagem: 'imagem/main/cardapio/bebidas/coca-2l.png', valor: '15,00', descricao: 'isso eh um teste'},
+            item_11: {titulo: 'CASQUINHA VIVENDA', imagem: 'imagem/main/cardapio/entradas/casquinha.jpg', valor: '50,00', descricao: 'isso eh um teste'},
+            item_12: {titulo: 'PASTEL DE CAMARÃO', imagem: 'imagem/main/cardapio/entradas/pastel.jpg', valor: '60.00', descricao: 'isso eh um teste'},
+            item_13: {titulo: 'ISCA DE PEIXE COM BATATA', imagem: 'imagem/main/cardapio/petiscos/isca-peixe.jpg', valor: '70.00', descricao: 'isso eh um teste'},
+            item_14: {titulo: 'BATATA FRITA', imagem: 'imagem/main/cardapio/petiscos/batata-frita.jpg', valor: '30.00', descricao: 'isso eh um teste'},
+            item_15: {titulo: 'SALADA CASUAL', imagem: 'imagem/main/cardapio/saladas/salada-casual.jpg', valor: '40.00', descricao: 'isso eh um teste'},
+            item_16: {titulo: 'SALADA MISTA', imagem: 'imagem/main/cardapio/saladas/salada-mista.jpg', valor: '25.00', descricao: 'isso eh um teste'},
+            item_17: {titulo: 'PENNE AO MOLHO DE STROGONOFF DE CAMARÃO', imagem: 'imagem/main/cardapio/massas/penne-ao-molho.jpg', valor: '60.00', descricao: 'isso eh um teste'},
+            item_18: {titulo: 'Taglierini ao Molho de Camarão ao Catupiry', imagem: 'imagem/main/cardapio/massas/taglierini.jpg', valor: '70.00', descricao: 'isso eh um teste'},
+            item_19: {titulo: 'Risoto Tailandês', imagem: 'imagem/main/cardapio/risotos/risoto-tailandes.jpg', valor: '80.00', descricao: 'isso eh um teste'},
+            item_20: {titulo: 'Risoto Di Mare', imagem: 'imagem/main/cardapio/risotos/risoto-mare.jpg', valor: '75.00', descricao: 'isso eh um teste'},
+            item_21: {titulo: 'Peixe Empanado', imagem: 'imagem/main/cardapio/tradicionais/peixe-empanado.jpg', valor: '79.90', descricao: 'isso eh um teste'},
+            item_22: {titulo: 'Camarão à Parmegiana', imagem: 'imagem/main/cardapio/tradicionais/camarao-parmegiana.jpg', valor: '90.00', descricao: 'isso eh um teste'},
+            item_23: {titulo: 'Camarão Oriental', imagem: 'imagem/main/cardapio/grelhados/camarao-oriental.jpg', valor: '90.00', descricao: 'isso eh um teste'},
+            item_24: {titulo: 'Salmão Grelhado', imagem: 'imagem/main/cardapio/grelhados/salmao-grelhado.jpg', valor: '85.00', descricao: 'isso eh um teste'},
+            item_25: {titulo: 'Paella Vivenda', imagem: 'imagem/main/cardapio/especialidades/paella-vivenda.jpg', valor: '60.00', descricao: 'isso eh um teste'},
+            item_26: {titulo: 'Bobó de Camarão', imagem: 'imagem/main/cardapio/especialidades/bobo-camarao.jpg', valor: '70.00', descricao: 'isso eh um teste'},
+            item_27: {titulo: 'Bolo Nega Maluca', imagem: 'imagem/main/cardapio/sobremesas/bolo-chocolate.jpg', valor: '30.00', descricao: 'isso eh um teste'},
+            item_28: {titulo: 'Pudim de Leite Moça', imagem: 'imagem/main/cardapio/sobremesas/pudim.jpg', valor: '25.00', descricao: 'isso eh um teste'}
         }
 
         function coletar_dados(id) {
@@ -426,7 +704,6 @@
                 behavior: 'smooth'
             })
         }
-
     </script>
 </body>
 </html>
