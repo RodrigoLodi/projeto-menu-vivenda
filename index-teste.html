@@ -95,7 +95,7 @@
                                 <button class="nav-link active link-header" id="pills-destaques-tab" data-bs-toggle="pill" data-bs-target="#pills-destaques" type="button" role="tab" aria-controls="pills-destaques" aria-selected="true" id="botao-destaques"><img src="imagem/header/estrela.png" alt="estrela.png"> DESTAQUES</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link link-header" id="pills-cardapio-tab" data-bs-toggle="pill" data-bs-target="#pills-cardapio" type="button" role="tab" aria-controls="pills-cardapio" aria-selected="false" id="botao-cardapio"><img src="imagem/header/cardapio.png" alt="cardapio"> CARDÁPIO</button>
+                                <button class="nav-link link-header" id="pills-cardapio-tab" data-bs-toggle="pill" data-bs-target="#pills-cardapio" type="button" role="tab" aria-controls="pills-cardapio" aria-selected="false" id="botao-cardapio"  onclick="funcaoRolar()"><img src="imagem/header/cardapio.png" alt="cardapio"> CARDÁPIO</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link link-header" id="pills-promocoes-tab" data-bs-toggle="pill" data-bs-target="#pills-promocoes" type="button" role="tab" aria-controls="pills-promocoes" aria-selected="false" id="botao-promocoes"><img src="imagem/header/promocoes.png" alt=""> OFERTAS</button>
@@ -208,8 +208,8 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <div class="tab-content" id="pills-tabContent scroll">
+                        <!--NESSA DIV ABAIXO TINHA A CLASS tab-content-->
+                        <div class="tab-cardapio" id="pills-tabContent">
                             <!--Cardápio Bebidas-->
                             <div class="tab-pane fade show active" id="pills-bebidas" role="tabpanel" aria-labelledby="pills-bebidas-tab" tabindex="0">
 
@@ -409,14 +409,16 @@
             var modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
             modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
         })
-    </script>
-    <script>
-        var scrollDown = function (evt) {
-            var barraRolagem = document.getElementById('scroll')
-            barraRolagem.scrollTop = barraRolagem.scrollHeight
+
+
+        var receber = document.querySelector('#scroll')
+        function funcaoRolar() {
+            receber.scrollTo({
+                left: 800,
+                top: 0,
+                behavior: 'smooth'
+            })
         }
-        var botao = document.getElementById('botao-cardapio')
-        botao.onclick = scrollDown
     </script>
 </body>
 </html>
