@@ -23,7 +23,7 @@
                     <a href="index.html"><img src="imagem/header/logo.png" alt=""></a>
                 </div>
                     <div class="col-2" id="coluna-carrinho">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="esconder-botao">
                             <img src="imagem/header/carrinho.png" alt="" class="imagem-carrinho">
                         </button>
                     </div>
@@ -36,13 +36,13 @@
                 <div class="modal-content">
                     <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">SUAS COMPRAS</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" class="fechar-modal"></button>
                     </div>
                     <div class="modal-body">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorum neque ipsa repudiandae laudantium maxime aperiam expedita consequatur provident quas fugiat saepe eligendi inventore nihil quia, esse tempora odio! Qui?
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="fechar-modal">Voltar</button>
+                    <button type="button" class="btn btn-secondary" class="fechar-modal"data-bs-dismiss="modal" id="fechar-modal">Voltar</button>
                     <button type="button" class="btn btn-primary" id="confirmar-compra">Confirmar Compra</button>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                             <div class="col-8">
                                 <h1 class="modal-title fs-5" id="titulo-modal-destaque"></h1>
                             </div>
-                            <div class="col-2"><button type="button" class="btn-close botao-fechar" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                            <div class="col-2"><button type="button" class="btn-close botao-fechar" data-bs-dismiss="modal" aria-label="Close" id="botao-fechar-modal-produtos"></button></div>
                         </div>
                     </div>
                     <div class="modal-body">
@@ -614,10 +614,15 @@
     <!--
     <script src="bootstrap/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
     -->
-   
     <script src="bootstrap/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
     <script>
-         function preco(el){
+        var acao
+        var botaoFechar = document.querySelector('#botao-fechar-modal-produtos')
+            botaoFechar.addEventListener('click', event=>{
+                acao = 'null'
+        })
+
+        function preco(el){
                 return document.getElementById(el);
         }
         window.onload = function(){
@@ -669,9 +674,10 @@
                 valor: dados['item_'+id].valor,
             }
         }
-
+        
         var destaqueModal = document.getElementById('modal-destaque')
         destaqueModal.addEventListener('show.bs.modal', event => {
+            acao = 'modal-produtos'
             var button = event.relatedTarget
             
             var id = button.getAttribute('data-id')
@@ -687,20 +693,21 @@
             var modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
             modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
 
-            
-            var carrinhoModal = document.getElementById('botao-carrinho-modal')
-                carrinhoModal.addEventListener('click', event => {
-                    var fecharModal = document.getElementById('fechar-modal')
-                    fecharModal.addEventListener('click', event =>{
+  
+                var fecharModal = document.getElementById('fechar-modal')
+                fecharModal.addEventListener('click', event =>{
+                    if (acao == 'modal-produtos'){
                         document.querySelector(".botao-imagem-main-destaques").click(function(){
                             $("#modal-destaque").modal();
                         });
-                    })
+                        modalTitulo.textContent = `${dados_atualizar.titulo}`
+                        document.getElementById('modal-imagem').src = `${dados_atualizar.imagem}`
+                        modalDescricao.textContent = `${dados_atualizar.descricao}`
+                        modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
+                    }
                 })
         })
 
-        
-        
         var receber = document.querySelector('#scroll')
         function funcaoRolar() {
             receber.scrollTo({
@@ -717,8 +724,6 @@
                 behavior: 'smooth'
             })
         }
-
-
     </script>
 </body>
 </html>
