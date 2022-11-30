@@ -42,7 +42,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorum neque ipsa repudiandae laudantium maxime aperiam expedita consequatur provident quas fugiat saepe eligendi inventore nihil quia, esse tempora odio! Qui?
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="fechar-modal">Fechar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="fechar-modal">Voltar</button>
                     <button type="button" class="btn btn-primary" id="confirmar-compra">Confirmar Compra</button>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                     <div class="modal-header">
                         <div class="row gx-0" style="width: 100%">
                             <div class="col-2" class="carrinho-modal">
-                                <button type="button" class="botao-carrinho-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <button type="button" class="botao-carrinho-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="botao-carrinho-modal">
                                     <img src="imagem/header/carrinho-preto.png" alt="">
                                 </button>
                             </div>
@@ -670,7 +670,7 @@
             }
         }
 
-        const destaqueModal = document.getElementById('modal-destaque')
+        var destaqueModal = document.getElementById('modal-destaque')
         destaqueModal.addEventListener('show.bs.modal', event => {
             var button = event.relatedTarget
             
@@ -686,7 +686,20 @@
             modalDescricao.textContent = `${dados_atualizar.descricao}`
             var modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
             modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
+
+            
+            var carrinhoModal = document.getElementById('botao-carrinho-modal')
+                carrinhoModal.addEventListener('click', event => {
+                    var fecharModal = document.getElementById('fechar-modal')
+                    fecharModal.addEventListener('click', event =>{
+                        document.querySelector(".botao-imagem-main-destaques").click(function(){
+                            $("#modal-destaque").modal();
+                        });
+                    })
+                })
         })
+
+        
         
         var receber = document.querySelector('#scroll')
         function funcaoRolar() {
@@ -704,6 +717,8 @@
                 behavior: 'smooth'
             })
         }
+
+
     </script>
 </body>
 </html>
