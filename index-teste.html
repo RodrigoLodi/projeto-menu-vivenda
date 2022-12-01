@@ -36,7 +36,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">SUAS COMPRAS</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" class="fechar-modal"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="fechar-modal2"></button>
                     </div>
                     <div class="modal-body">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorum neque ipsa repudiandae laudantium maxime aperiam expedita consequatur provident quas fugiat saepe eligendi inventore nihil quia, esse tempora odio! Qui?
@@ -617,6 +617,7 @@
     <script src="bootstrap/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var acao
+        var reset
         var botaoFechar = document.querySelector('#botao-fechar-modal-produtos')
             botaoFechar.addEventListener('click', event=>{
                 acao = 'null'
@@ -674,28 +675,42 @@
                 valor: dados['item_'+id].valor,
             }
         }
+
         
-        var destaqueModal = document.getElementById('modal-destaque')
-        destaqueModal.addEventListener('show.bs.modal', event => {
+
+        if (reset == 'SIM'){ 
+            destaqueModal = document.getElementById('modal-destaque')
+            destaqueModal.addEventListener('shown.bs.modal', event => {
             acao = 'modal-produtos'
-            var button = event.relatedTarget
-            
-            var id = button.getAttribute('data-id')
 
-            var dados_atualizar = coletar_dados(id)
+            dados_atualizar = coletar_dados(id)
+            console.log(id)
 
-            var modalTitulo = destaqueModal.querySelector('.modal-title')
+            modalTitulo = destaqueModal.querySelector('.modal-title')
             modalTitulo.textContent = `${dados_atualizar.titulo}`
-            var modalImage = destaqueModal.querySelector('.imagem-main-destaque')
+            modalImage = destaqueModal.querySelector('.imagem-main-destaque')
             document.getElementById('modal-imagem').src = `${dados_atualizar.imagem}`
-            var modalDescricao = destaqueModal.querySelector('.conteudo-descricao-modal')
+            modalDescricao = destaqueModal.querySelector('.conteudo-descricao-modal')
             modalDescricao.textContent = `${dados_atualizar.descricao}`
-            var modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
+            modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
             modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
-
   
-                var fecharModal = document.getElementById('fechar-modal')
+                fecharModal = document.getElementById('fechar-modal')
                 fecharModal.addEventListener('click', event =>{
+                    if (acao == 'modal-produtos'){
+                        document.querySelector(".botao-imagem-main-destaques").click(function(){
+                            $("#modal-destaque").modal();
+                        });
+                        modalTitulo.textContent = `${dados_atualizar.titulo}`
+                        document.getElementById('modal-imagem').src = `${dados_atualizar.imagem}`
+                        modalDescricao.textContent = `${dados_atualizar.descricao}`
+                        modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
+
+                    }
+                })
+
+                fecharModal2 = document.getElementById('fechar-modal2')
+                fecharModal2.addEventListener('click', event =>{
                     if (acao == 'modal-produtos'){
                         document.querySelector(".botao-imagem-main-destaques").click(function(){
                             $("#modal-destaque").modal();
@@ -707,7 +722,54 @@
                     }
                 })
         })
+        } else {
+            var destaqueModal = document.getElementById('modal-destaque')
+            destaqueModal.addEventListener('show.bs.modal', event => {
+                acao = 'modal-produtos'
+                var button = event.relatedTarget
+                
+                var id = button.getAttribute('data-id')
+                
+                var dados_atualizar = coletar_dados(id)
+                console.log(id)
 
+                var modalTitulo = destaqueModal.querySelector('.modal-title')
+                modalTitulo.textContent = `${dados_atualizar.titulo}`
+                var modalImage = destaqueModal.querySelector('.imagem-main-destaque')
+                document.getElementById('modal-imagem').src = `${dados_atualizar.imagem}`
+                var modalDescricao = destaqueModal.querySelector('.conteudo-descricao-modal')
+                modalDescricao.textContent = `${dados_atualizar.descricao}`
+                var modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
+                modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
+    
+                    var fecharModal = document.getElementById('fechar-modal')
+                    fecharModal.addEventListener('click', event =>{
+                        if (acao == 'modal-produtos'){
+                            document.querySelector(".botao-imagem-main-destaques").click(function(){
+                                $("#modal-destaque").modal();
+                            });
+                            modalTitulo.textContent = `${dados_atualizar.titulo}`
+                            document.getElementById('modal-imagem').src = `${dados_atualizar.imagem}`
+                            modalDescricao.textContent = `${dados_atualizar.descricao}`
+                            modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
+
+                        }
+                    })
+                    var fecharModal2 = document.getElementById('fechar-modal2')
+                    fecharModal2.addEventListener('click', event =>{
+                        if (acao == 'modal-produtos'){
+                            document.querySelector(".botao-imagem-main-destaques").click(function(){
+                                $("#modal-destaque").modal();
+                            });
+                            modalTitulo.textContent = `${dados_atualizar.titulo}`
+                            document.getElementById('modal-imagem').src = `${dados_atualizar.imagem}`
+                            modalDescricao.textContent = `${dados_atualizar.descricao}`
+                            modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
+                            }
+                        })
+                    
+                    })
+        }
         var receber = document.querySelector('#scroll')
         function funcaoRolar() {
             receber.scrollTo({
