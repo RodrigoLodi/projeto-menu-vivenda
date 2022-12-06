@@ -169,6 +169,27 @@ header {
     text-align: center;
 }
 
+.observacoes {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.observacoes > p {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.campo-obs {
+    width: 90%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgba(187, 187, 187, 0.664);
+}
+
+.campo-obs::placeholder {
+    color: rgb(187, 187, 187);
+}
+
 .botao-carrinho-modal {
     border: none;
     background-color: transparent;
