@@ -184,10 +184,44 @@ header {
     height: 35px;
     border-radius: 5px;
     border: 1px solid rgba(187, 187, 187, 0.664);
+    text-indent: 10px;
 }
 
 .campo-obs::placeholder {
     color: rgb(187, 187, 187);
+}
+
+.adicionais > h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: rgb(165, 165, 165);
+    background-color: rgb(240, 239, 239);
+    padding: 10px 10px 10px 5px;
+    font-size: 1em;
+}
+
+.adicionais > div {
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.adicionais-conteudo {
+    text-indent: 10px;
+}
+
+.adicionais-botao {
+    text-align: center;
+}
+
+.adicionais-botao > button {
+    color: red;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
 }
 
 .botao-carrinho-modal {
@@ -247,7 +281,7 @@ header {
 }
 
 .conteudo-descricao-modal {
-    margin-top: 5px;
+    margin-top: 10px;
     text-align: justify;
 }
 
