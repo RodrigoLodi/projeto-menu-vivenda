@@ -141,7 +141,7 @@
                             <img src="" id="modal-imagem">
                         </div>
                         <p class="conteudo-descricao-modal" id="descricao-modal-destaque"></p>
-                        <div class="adicionais">
+                        <div class="adicionais" id="adicionais">
                             <h1>Adicionais</h1>
                             <div class="row gx-0">
                                 <div class="col-10 adicionais-conteudo">Arroz</div>
@@ -211,7 +211,7 @@
                         <div class="row no-gx">
                             <div class="col-md-6 col-xl-4" id="coluna-imagem-main-destaques">
                                 <!--Botao Item 1 Destaque-->
-                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="1">
+                                <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="1" data-adicionais="">
                                     <div class="imagem-main-destaques">
                                         <img src="imagem/main/679f59dbb22c4851b61f4ce9920ca395.jpg">
                                         <div class="row gx-0">
@@ -596,7 +596,7 @@
                             <div class="tab-pane fade" id="pills-especialidades" role="tabpanel" aria-labelledby="pills-especialidades-tab" tabindex="0">
                                 <div class="row gx-0">
                                     <div class="col-md-6 col-xl-4" id="coluna-imagem-main-destaques">
-                                        <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="25">
+                                        <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="25" data-adicionais="S">
                                             <div class="imagem-main-destaques">
                                                 <img src="imagem/main/cardapio/especialidades/paella-vivenda.jpg">
                                                 <div class="row gx-0">
@@ -611,7 +611,7 @@
                                         </button>
                                     </div>
                                     <div class="col-md-6 col-xl-4" id="coluna-imagem-main-destaques">
-                                        <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="26">
+                                        <button class="botao-imagem-main-destaques" type="button" data-bs-toggle="modal" data-bs-target="#modal-destaque" data-bs-avalie="1" data-id="26" data-adicionais="S">
                                             <div class="imagem-main-destaques">
                                                 <img src="imagem/main/cardapio/especialidades/bobo-camarao.jpg">
                                                 <div class="row gx-0">
@@ -775,6 +775,7 @@
     -->
     <script src="bootstrap/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        var adicional = ' '
         var acao
         var reset = 'SIM'
         var botaoFechar = document.querySelector('#botao-fechar-modal-produtos')
@@ -840,7 +841,9 @@
                 if (reset == 'SIM') {
                 button = event.relatedTarget
                 }
+                
                 var id = button.getAttribute('data-id')
+                adicional = button.getAttribute('data-adicionais')
                 var dados_atualizar = coletar_dados(id)
                 var modalTitulo = destaqueModal.querySelector('.modal-title')
                 modalTitulo.textContent = `${dados_atualizar.titulo}`
@@ -850,14 +853,20 @@
                 modalDescricao.textContent = `${dados_atualizar.descricao}`
                 var modalPreco = destaqueModal.querySelector('.valor-modal-destaque')
                 modalPreco.textContent = `${'Adicionar R$ '+dados_atualizar.valor}`
-                
+                if (adicional == 'S') {
+                    document.getElementById('adicionais').style.display = 'block'
+                } else {
+                    document.getElementById('adicionais').style.display = 'none'
+                }
                 var botaoCarrinhoModal = document.querySelector('#botao-carrinho-modal')
+
                 botaoCarrinhoModal.addEventListener('click', event =>{
                     reset = ' '
                 })
 
                     var fecharModal = document.getElementById('fechar-modal')
                     fecharModal.addEventListener('click', event =>{
+                        adicional = ' '
                         if (acao == 'modal-produtos'){
                             document.querySelector(".botao-imagem-main-destaques").click(function(){
                                 $("#modal-destaque").modal();
@@ -866,6 +875,7 @@
                     })
                     var fecharModal2 = document.getElementById('fechar-modal2')
                     fecharModal2.addEventListener('click', event =>{
+                        adicional = ' '
                         if (acao == 'modal-produtos'){
                             document.querySelector(".botao-imagem-main-destaques").click(function(){
                                 $("#modal-destaque").modal();
