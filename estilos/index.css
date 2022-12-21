@@ -1,4 +1,21 @@
 @charset "UTF-8";
+
+@media (min-width: 550px) and (max-width: 767px)  {
+    .imagem-main-destaques  {
+        width: 400px !important;
+    }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+    .imagem-main-destaques {
+        width: 380px !important;
+    }
+}
+
+@media (min-width: 1366px) {
+    .imagem-main-destaques {
+        width: 400px !important;
+    }
+}
 * {
     padding: 0;
     margin: 0;
@@ -148,13 +165,104 @@ header {
 }
 
 .modal-header {
-    padding: 16px 5px 16px 5px;
+    padding: 16px;
+    text-align: center;
 }
 
+.observacoes {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.observacoes > p {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.campo-obs {
+    width: 90%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgba(187, 187, 187, 0.664);
+    text-indent: 10px;
+}
+
+.campo-obs::placeholder {
+    color: rgb(187, 187, 187);
+}
+
+.adicionais > h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: rgb(165, 165, 165);
+    background-color: rgb(240, 239, 239);
+    padding: 10px 10px 10px 5px;
+    font-size: 1em;
+}
+
+.adicionais > div {
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.adicionais-conteudo {
+    text-indent: 10px;
+}
+
+.adicionais-botao {
+    text-align: center;
+}
+
+.adicionais-botao > button {
+    color: red;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
 
 .botao-carrinho-modal {
     border: none;
     background-color: transparent;
+}
+
+.linha-carrinho {
+    margin-bottom: 10px;
+}
+
+.coluna-menor-carrinho {
+    text-align: center;
+}
+
+.coluna-menor-carrinho > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.coluna-maior-carrinho  {
+    text-align: center;
+    margin: auto;
+}
+
+.coluna-maior-carrinho > p {
+    margin: 0px 2px 0px 2px;
+    font-weight: 650;
+}
+
+.coluna-lixeira-carrinho {
+    text-align: center;
+    margin: auto;
+}
+
+.coluna-lixeira-carrinho > button {
+    border: none;
+}
+
+.coluna-lixeira-carrinho > button > img {
+    width: 18px;
 }
 
 .botao-carrinho-modal > img {
@@ -173,7 +281,7 @@ header {
 }
 
 .conteudo-descricao-modal {
-    margin-top: 5px;
+    margin-top: 10px;
     text-align: justify;
 }
 
@@ -219,6 +327,22 @@ header {
     border: none;
     border-radius: 8px;
     font-weight: 400;
+}
+
+.adicionar-carrinho > p {
+    margin: 0;
+}
+
+.botao-cardapio-rolagem {
+    margin-top: 10px;
+    height: 60px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.botao-cardapio-rolagem > ul {
+    width: 1000px;
 }
 
 #coluna-imagem-main-cardapio {
